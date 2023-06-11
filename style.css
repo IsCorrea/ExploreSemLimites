@@ -5,13 +5,13 @@
   --bg-card: #FFFFFF;
   --font-color-card: #312D64;
   font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 main {
@@ -54,6 +54,7 @@ main {
   border: 4px solid #B52184;
   border-radius: 76rem;
   margin-top: 3.5rem;
+  background: transparent url(assets/arrowButton.svg) no-repeat center;
 }
 
 #about {
@@ -111,12 +112,35 @@ main {
 }
 
 #contacts input, #contacts textarea {
+  font-family: 'Mulish';
   font-size: 1.6rem;
+  color: var(--font-color);
   line-height: 100%;
   width: 34.8rem;
   padding: 1.6rem;
+  padding-left: 5rem;
   border: 1.5px solid #312D64;
   border-radius: 1.6rem;
+  background-color: var(--background-color);
+}
+
+#contacts textarea {
+  padding: 1.6rem;
+}
+
+::placeholder {
+  color: var(--font-color);
+  opacity: 1;
+}
+
+#nameInput {
+  background: url(assets/formName.svg) no-repeat scroll center left 1.4rem;
+  padding: 5rem;
+}
+
+#mailInput {
+  background: url(assets/formMail.svg) no-repeat scroll center left 1.4rem;
+  padding: 5rem;
 }
 
 #contacts button {
