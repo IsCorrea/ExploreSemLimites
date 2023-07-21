@@ -39,6 +39,12 @@ main {
   margin-top: 1.7rem;
 }
 
+.homeText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #home p {
   color: var(--font-color);
   font-size: 2rem;
@@ -60,13 +66,14 @@ main {
 #about {
   background-image: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
   padding: 5.3rem;
-  display: grid;
+  display: flex;
   gap: 5rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #about div {
-  max-width: 37rem;
+  width: 37rem;
   padding: 2.65rem 6rem 2.56rem 2.56rem;
   display: flex;
   flex-direction: column;
@@ -97,6 +104,9 @@ main {
 }
 
 #contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 7.8rem 4rem 6.5rem;
 }
 
@@ -155,6 +165,10 @@ main {
   border-radius: 1.6rem;
 }
 
+.backgroundForm {
+  display: none;
+}
+
 footer {
   color: var(--bg-card);
   font-size: 2rem;
@@ -162,4 +176,75 @@ footer {
   text-align: center;
   padding: 3.2rem 1.6rem;
   background-image: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+}
+
+button {
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  #home {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0 3rem 10rem 7rem;
+  }
+  
+  #home img {
+    width: 54rem;
+    height: 55rem;
+  }
+  
+  #home h1 {
+    margin-top: 0;
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: left;
+  }
+  
+  .homeText {
+    height: 54rem;
+    padding-top: 23rem;
+    padding-bottom: 3rem;
+    align-items: flex-start;
+  }
+  
+  #home p {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    text-align: left;
+  }
+  
+  #home button {
+    margin-top: 7rem;
+  }
+  .mainForm {
+    width: 100%;
+  }
+
+  .backgroundForm {
+    display: block;
+    width: 60rem;
+  }
+
+  #contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    padding-left: 4rem;
+  }
+
+  #contacts input {
+    max-width: 60rem;
+  }
+
+  #contacts textarea {
+    height: 15rem;
+    width: 60rem;
+  }
+
+  .mainForm {
+    padding-top: 4rem;
+  }
 }
